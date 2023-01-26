@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+* {font-family: 'Montserrat', sans-serif;}
+img {max-width: 100%; display: block;}
+svg {max-width: 100%; display: block;}
+body {margin: 0; overflow-x: hidden; box-sizing: border-box;}
+.center-wrap {max-width: 80%; width: 100%; margin: auto;}
+.order {display: block; cursor: pointer; margin-top: 30px;  transition: .3s;color: #fff; padding: 20px; border-radius: 10px; background-color: purple; width: max-content; text-decoration: none;}
+.order:hover {opacity: .8; transition: .3s;}
+
+.header {position: relative;padding-bottom: 40px;}
+.header > img {z-index: -1; position: absolute; height: 100%; width: 100vw; max-width: unset; left: 50%; margin-left: -50vw; top: 0;}
+.header .title {text-align: center; color: #fff;}
+.header .title h1 {margin: 0; padding-top: 20px; font-size: 100px; margin-bottom: 50px;}
+.header .wrapper {display: flex;}
+.header .wrapper .wrap {flex: 1;}
+.header .wrapper .wrap ul {color: #fff;}
+.header .wrapper .wrap ul li {margin-bottom: 10px;}
+.header .wrapper .wrap img {display: block; margin: auto;}
+
+.components {position: relative;}
+.components::before {z-index: -1; content: ''; position: absolute; width: 100vw; height: 100%; left: 50%; background: linear-gradient(218deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); margin-left: -50vw;}
+.components .wrapper-row { display: flex; }
+.components .wrapper-row .wrapper-col { flex: 1; }
+.components .wrapper-row .wrapper-col .wrap { width: 200px; height: 200px; margin: 90px auto; border: 2px solid; border-radius: 50%; display: flex; flex-direction: column; align-items: center; }
+.components .wrapper-row .wrapper-col .wrap svg { width: 100px; margin: 20px auto 14px; }
+.components .wrapper-row .wrapper-col .wrap .title { text-align: center; font-size: 30px; }
+.components .wrapper-row .wrapper-center { flex: 1; margin: auto; }
+.components .wrapper-row .wrapper-center img { margin: 30px auto; }
+.components a {margin: 30px auto;}
+
+.carousel { position: relative; padding-top: 100px; padding-bottom: 100px;}
+.carousel::before {z-index: -1; top: 0; content: ''; position: absolute; width: 100vw; height: 100%; left: 50%; background: linear-gradient(334deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); margin-left: -50vw;}
+.carousel .item { padding: 24px; border-radius: 20px; border: 5px solid; }
+.carousel .item svg { width: 100px; margin: 20px auto; }
+.carousel .item .title { font-size: 24px; margin-bottom: 20px; }
+.carousel a {margin: 40px auto 0;}
+
+.promo {position: relative; padding-bottom: 100px;}
+.promo a {margin: 40px auto;}
+.promo li {margin-bottom: 16px;}
+.promo ul {margin-top: 30px;}
+.promo::before {z-index: -1; top: 0; content: ''; position: absolute; width: 100vw; height: 100%; left: 50%; background: linear-gradient(208deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); margin-left: -50vw;}
+.promo .wrapper {display: flex; gap: 10px;}
+.promo .wrapper .wrap {flex: 1;display: flex;align-items: center;flex-direction: column;justify-content: center;}
+.promo .wrapper .wrap .text { font-size: 24px; }
+
+.form {position: relative; padding-bottom: 100px;}
+.form::before { z-index: -1; top: 0; content: ''; position: absolute; width: 100vw; height: 100%; left: 50%; background: linear-gradient(338deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); margin-left: -50vw; }
+.form .title {font-size: 100px; text-align: center;}
+.form .input {position: relative;width: max-content;margin: auto;}
+.form input::placeholder {color: #fff;}
+.form input:focus-visible {outline: none;}
+.form .example {position: absolute; left: 105%; width: max-content; background: #fff; top: 0; bottom: 20px; height: max-content; opacity: 0; transition: .3s; pointer-events: none; padding: 10px; margin: auto; border-radius: 5px; }
+.form input:focus + .example { opacity: 1; transition: .3s;}
+.form input::-webkit-outer-spin-button, .form input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.form .wrapper {display: flex;}
+.form .wrapper > * {flex: 1;}
+.form .wrapper img {margin: auto;}
+.form .new-price {text-align: center; text-transform: uppercase; background-image: linear-gradient( -225deg, #231557 0%, #ff1361 50%, #fff800 100% ); background-size: 200% auto; color: #fff; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: textclip 2s linear infinite; font-size: 30px; }
+.form .old-price {text-align: center; text-decoration: line-through;}
+.form form {padding: 34px;border: 1px solid;border-radius: 24px;}
+.form form input {padding: 10px;border: none;border-bottom: 4px solid;margin-bottom: 20px;background: none;width: 200px;}
+.form button {    display: block; margin-top: 30px; color: #fff; padding: 20px; border-radius: 10px; border: none; margin: auto; background-color: purple; width: max-content; text-decoration: none;}
+article .count {margin: auto;width: max-content; margin-bottom: 30px;}
+article #timer {font-size: 50px; color: red; }
+
+@media screen and (max-width: 1200px) {
+  
+}
+@media screen and (max-width: 992px) {
+  .center-wrap {max-width: 90%; width: 100%; margin: auto;}
+  .components .wrapper-row .wrapper-col .wrap {width: 170px; height: 170px;}
+  .components .wrapper-row .wrapper-col .wrap svg {width: 70px;}
+}
+@media screen and (max-width: 768px) {
+  .header a {margin: auto;}
+  .header .title h1 {font-size: 60px;}
+  .promo .wrapper .wrap .text {font-size: 18px;}
+  .form .title {font-size: 60px;}
+  .promo .wrapper {flex-direction: column;}
+  .components .wrapper-row {flex-direction: column;}
+  .components .wrapper-row .wrapper-col {display: flex;}
+  .components .wrapper-row .wrapper-col .wrap {margin: 50px auto;}
+  .form .wrapper {flex-direction: column-reverse; gap: 30px;}
+  .header .wrapper {flex-direction: column-reverse; gap: 30px;}
+}
+@media screen and (max-width: 576px) {
+  .components .wrapper-row .wrapper-col {flex-direction: column;}
+  .components .wrapper-row .wrapper-col .wrap {margin: 15px auto;}
+  .form form input {width: 180px;}
+  .form .example {right: 0; left: unset; top: unset; margin: 0; bottom: 100%;}
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
